@@ -2,7 +2,7 @@ install test sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=TO
                         OR
 install test sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.user=username -Dsonar.password=password
 
-if settings.xml is configured with sonarqube plugin, simply use install test sonar:sonar
+if settings.xml is configured with Sonarqube plugin, simply use install test sonar:sonar
 
 Best practice is to use a token and embed the host url and login into settings.xml file located at MAVEN_HOME/conf
 
@@ -22,13 +22,12 @@ Example:
                 <sonar.host.url>
                   http://localhost:9000
                 </sonar.host.url>
-                <sonar.user>
-				        user
-				        </sonar.user>
-				        <sonar.password>
-				        password
-				        </sonar.password>
+		<sonar.login>
+		    TOKEN
+		</sonar.login>
             </properties>
         </profile>
      </profiles>
 </settings>
+
+Use <sonar.user> username </sonar.user> <sonar.password> password </sonar.password> if you haven't created a token.
