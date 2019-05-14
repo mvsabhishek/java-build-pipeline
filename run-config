@@ -1,0 +1,4 @@
+install test sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=TOKEN 
+install test sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.user=username -Dsonar.password=password
+
+Best practice is to use a token and embed the host url and login into POM.xml
